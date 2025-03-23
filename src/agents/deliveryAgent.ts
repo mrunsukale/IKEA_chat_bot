@@ -28,7 +28,7 @@ export const deliveryAgent: Agent = {
     // 1. Delivery date
     if (q.includes("delivery date")) {
       if (q.includes("order number")) {
-        return "It will arrive in 3-4 business days. Or else you can track your order by providing your order number.";
+        return "YOU ARE DIRECTED TO DELIVERY AGENT. It will arrive in 3-4 business days. Or else you can track your order by providing your order number.";
       }
       return "To track your order, please provide your order number and I'll check its status immediately.";
     }
