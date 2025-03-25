@@ -10,7 +10,7 @@ const deliveryQuestions = [
   "status of my delivery",
   "missed delivery appointment",
   "signature upon delivery",
-  "delivery region",
+  "delivery available",
   "delivery charges",
 ].map((q) => q.toLowerCase());
 
@@ -28,14 +28,14 @@ export const deliveryAgent: Agent = {
     // 1. Delivery date
     if (q.includes("delivery date")) {
       if (q.includes("order number")) {
-        return "You are now connected with the Delivery Agent. Your product will arrive in 3-4 business days. Or else you can track your order by providing your order number.";
+        return "You are now connected with the Delivery Agent. Your product will arrive in 3-4 business days.";
       }
       return "You are now connected with the Delivery Agent. To track your order, please provide your order number and I'll check its status immediately.";
     }
 
     // 2. Delivery address
     if (q.includes("delivery address")) {
-      if (q.includes("order number")) {
+      if (q.includes("order")) {
         return "You are now connected with the Delivery Agent. Unfortunately, modifications can only be made up until a certain order status. We would recommend that you confirm all delivery details before completing your order. If modification is required after payment has been taken, we kindly ask that you cancel and rebook your order with the correct information. For more information, please request a live agent here in the chat.";
       }
       return "You are now connected with the Delivery Agent. To help you I'll need your order number to check the delivery status. Could you please share it?";
@@ -71,20 +71,20 @@ export const deliveryAgent: Agent = {
 
     // 8. Signature upon delivery
     if (q.includes("signature upon delivery")) {
-      return "You are now connected with the Delivery Agent. Here's an article from our FAQs that might help you find the order number.";
+      return "You are now connected with the Delivery Agent. Yes, many carriers offer signature delivery. Check with the retailer or shipping provider to request this service. Here's an article from our FAQs that might help you find the order number.";
     }
 
     // 9. Delivery region
-    if (q.includes("delivery region")) {
-      return "You are now connected with the Delivery Agent. Sorry, that order number doesn't exist. Perhaps you could check your order status from your purchase history page?";
+    if (q.includes("delivery available")) {
+      return "You are now connected with the Delivery Agent.Delivery availability depends on the retailer and carrier. Check their website or enter your location at checkout for details.";
     }
 
     // 10. Delivery charges
     if (q.includes("delivery charges")) {
-      return "You are now connected with the Delivery Agent. How can I help you today?";
+      return "You are now connected with the Delivery Agent. Delivery charges vary by retailer, location, and shipping method. Check the seller’s website or contact customer support for details.";
     }
 
     // Fallback response
-    return "You are now connected with the Delivery Agent. I'm not sure how to help with that. Can you please rephrase or ask about your delivery?";
+    return "You are now connected with the Delivery Agent. Sorry, I'm not sure I understand what you are looking for. Is there anything else I can help you with?";
   },
 };

@@ -69,6 +69,6 @@ export const salesAgent: Agent = {
       return "You are now connected with the Sales Agent. IKEA typically does not offer price matching with competitors. Their focus is on providing high-quality, affordable products directly.";
     }
 
-    return "You are now connected with the Sales Agent. I can help with product information, availability, and store details. What specific information are you looking for?";
+    return "You are now connected with the Sales Agent. I can help with product information, availability, and store details.  I'm not sure I understand what you are looking for. Is there anything else I can help you with??";
   },
 };
