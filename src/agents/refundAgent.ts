@@ -41,11 +41,11 @@ export const refundAgent: Agent = {
       return "You are now connected with the Refund Agent. If you don’t have the original receipt, IKEA may offer an exchange or store credit. It’s recommended to bring a valid photo ID and any proof of purchase, such as an order confirmation or bank statement. Contact IKEA support for more guidance.";
     }
 
-    if (q.includes("item are not eligible for return")) {
+    if (q.includes("items are not eligible for return")) {
       return "You are now connected with the Refund Agent. Certain items are not eligible for return, such as customized products, cut fabric, and items from the As-Is section. Please review IKEA’s return policy to confirm if your item qualifies for a return.";
     }
 
-    if (q.includes("received a refund")) {
+    if (q.includes("receive a refund")) {
       return "You are now connected with the Refund Agent. If you’ve received a refund, it will be processed to your original payment method. For credit card refunds, it may take up to 14 days. Contact customer support if you have concerns about your refund.";
     }
 
